@@ -1,14 +1,15 @@
 import { Aside } from "./components/Aside";
 import { Container } from "./components/Container";
+import { Main } from "./components/Main";
 import { SearchInput } from "./components/SearchInput";
 
 function App() {
   return (
     <Container>
       <Aside />
-      <main>
+      <Main>
         <SearchInput />
-      </main>
+      </Main>
     </Container>
   );
 }
