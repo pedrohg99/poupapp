@@ -31,7 +31,7 @@ function App() {
           </Card>
           <Card>
             <Card.Header>
-              Orçamento diário disponível:
+              Prograsso da meta financeira:
             </Card.Header>
             <Card.Body>
               
