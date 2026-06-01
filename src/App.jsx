@@ -7,54 +7,58 @@ import Card from "./components/Card";
 import { DailyBudget } from "./components/DailyBudget";
 import { SavingsSatus } from "./components/SavingsStatus";
 
+import styles from './app.module.css'
+
 function App() {
   return (
     <Container>
       <Aside />
       <Main>
-        <SearchInput />
-        <div>
-          <Typography variant="h1">
-            Olá, Pedro!
-          </Typography>
-          <Typography variant="body">
-            Veja como estão suas finanças hoje.
-          </Typography>
+        <div className={styles.container}>
+          <SearchInput />
+          <div>
+            <Typography variant="h1">
+              Olá, Pedro!
+            </Typography>
+            <Typography variant="body">
+              Veja como estão suas finanças hoje.
+            </Typography>
+          </div>
+          <section className={styles.grid}>
+            <Card>
+              <Card.Header>
+                Orçamento diário disponível:
+              </Card.Header>
+              <Card.Body>
+                <DailyBudget value={200} />
+              </Card.Body>          
+            </Card>
+            <Card>
+              <Card.Header>
+                Prograsso da meta financeira:
+              </Card.Header>
+              <Card.Body>
+                <SavingsSatus percent={40}/>
+              </Card.Body>          
+            </Card>
+            <Card>
+              <Card.Header>
+                Orçamento diário disponível:
+              </Card.Header>
+              <Card.Body>
+                R$ 200
+              </Card.Body>          
+            </Card>
+            <Card>
+              <Card.Header>
+                Orçamento diário disponível:
+              </Card.Header>
+              <Card.Body>
+                R$ 200
+              </Card.Body>          
+            </Card>
+          </section>
         </div>
-        <section>
-          <Card>
-            <Card.Header>
-              Orçamento diário disponível:
-            </Card.Header>
-            <Card.Body>
-              <DailyBudget value={200} />
-            </Card.Body>          
-          </Card>
-          <Card>
-            <Card.Header>
-              Prograsso da meta financeira:
-            </Card.Header>
-            <Card.Body>
-              <SavingsSatus percent={40}/>
-            </Card.Body>          
-          </Card>
-          <Card>
-            <Card.Header>
-              Orçamento diário disponível:
-            </Card.Header>
-            <Card.Body>
-              R$ 200
-            </Card.Body>          
-          </Card>
-          <Card>
-            <Card.Header>
-              Orçamento diário disponível:
-            </Card.Header>
-            <Card.Body>
-              R$ 200
-            </Card.Body>          
-          </Card>
-        </section>
       </Main>
     </Container>
   );
