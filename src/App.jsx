@@ -35,7 +35,7 @@ function App() {
               Prograsso da meta financeira:
             </Card.Header>
             <Card.Body>
-              <SavingsSatus />
+              <SavingsSatus percent={40}/>
             </Card.Body>          
           </Card>
           <Card>
