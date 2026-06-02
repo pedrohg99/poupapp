@@ -1,19 +1,18 @@
+import styles from './transactionitem.module.css'
+
+const formater = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" })
+
 export const TransactionItem = ({ item }) => {
 
     return (
-        <div>
-            <div>
-                <p>
-                    {item.description}
-                </p>
-                <p>
-                    {item.value}
-                </p>
+        <div className={styles.transaction}>
+            <div className={styles.details}>
+                <p>{item.description}</p>
+                <p>{formater.format(item.value)}</p>
             </div>
-            <div>
-                {item.date}
+            <div className={styles.date}>
+                {new Date(item.date).toLocaleDateString('pt-BR')}
             </div>
-
         </div>
     )
 }
