@@ -40,7 +40,7 @@ export const Transactions = () => {
       </ul>
 
       <Button>
-        <IconCurrency />Adicionar transação
+        <IconCurrency /> Adicionar transação
       </Button>
 
     </>
