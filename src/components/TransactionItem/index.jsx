@@ -4,9 +4,11 @@ const formater = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "
 
 export const TransactionItem = ({ item }) => {
 
+    const detailsAddicionalClassName = item.value >= 0 ? styles.income : styles.expense
+
     return (
         <div className={styles.transaction}>
-            <div className={styles.details}>
+            <div className={[styles.details, detailsAddicionalClassName].join(' ')}>
                 <p>{item.description}</p>
                 <p>{formater.format(item.value)}</p>
             </div>
